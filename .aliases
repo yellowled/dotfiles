@@ -1,0 +1,11 @@
+# List all files
+alias la="ls -la"
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Gzip-enabled `curl`
+alias gurl="curl --compressed"
+
+# Update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
