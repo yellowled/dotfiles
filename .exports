@@ -11,5 +11,9 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 shopt -s cmdhist
 # merge session histories
 shopt -s histappend
+# corrects typos (eg: cd /ect becomes cd /etc)
+shopt -s cdspell
+# resize ouput to fit window
+shopt -s checkwinsize
 # Not a vi(m) person, let's use nano
 export EDITOR="nano"
