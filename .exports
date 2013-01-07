@@ -1,8 +1,13 @@
 # Larger bash history
-export HISTSIZE=4096
+export HISTSIZE=8192
 export HISTFILESIZE=$HISTSIZE
+# don't put duplicate lines in the history
 export HISTCONTROL=ignoredups
+# ... and ignore same successive entries.
+export HISTCONTROL=ignoreboth
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+# combine multiline commands in history
+shopt -s cmdhist
 # Not a vi(m) person, let's use nano
 export EDITOR="nano"
