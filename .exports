@@ -1,19 +1,27 @@
 # Larger bash history
 export HISTSIZE=8192
 export HISTFILESIZE=$HISTSIZE
+
 # don't put duplicate lines in the history
 export HISTCONTROL=ignoredups
+
 # ... and ignore same successive entries.
 export HISTCONTROL=ignoreboth
+
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
 # combine multiline commands in history
 shopt -s cmdhist
+
 # merge session histories
 shopt -s histappend
+
 # corrects typos (eg: cd /ect becomes cd /etc)
 shopt -s cdspell
+
 # resize ouput to fit window
 shopt -s checkwinsize
+
 # Not a vi(m) person, let's use nano
 export EDITOR="nano"
