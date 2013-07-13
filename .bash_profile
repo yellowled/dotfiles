@@ -24,3 +24,6 @@ fi
 
 # Use grunt-completion
 eval "$(grunt --completion=bash)"
+
+# Use rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
