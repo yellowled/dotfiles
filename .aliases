@@ -18,4 +18,3 @@ alias sudo='sudo '
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
 alias brew-update='brew update; brew upgrade; brew cleanup'
 alias npm-update='npm update npm -g; npm update -g'
-alias gem-update='sudo gem update; sudo gem cleanup'
