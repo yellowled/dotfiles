@@ -21,4 +21,7 @@ alias ruby-update='sudo gem update --system; sudo gem update; sudo gem cleanup'
 # alias npm-update='npm update npm -g; npm update -g'
 alias npm-update='npm install -g npm; npm update -g'
 # Update Homebrew packages
-alias brew-update='brew update; brew upgrade; brew cleanup'
+alias brew-update='brew update; brew upgrade --all; brew cleanup'
+
+# Expose local dev server through localtunnel.me
+alias localtunnel='lt --subdomain mees --port 9001'
