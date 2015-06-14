@@ -1,6 +1,6 @@
 # My dot files
 
-I currently use these on OS X using [iTerm2](http://www.iterm2.com/) and bash as my shell environment.
+I use these on OS X using [iTerm2](http://www.iterm2.com/) and [bash](http://www.gnu.org/software/bash/) as my shell environment.
 
 ## Sources (Thanks for sharing)
 
