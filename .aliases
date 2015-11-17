@@ -21,6 +21,6 @@ alias serve='python -m SimpleHTTPServer 8000'
 # Update Ruby gems
 alias ruby-update='gem update --system; gem update; gem cleanup'
 # Update npm + node packages
-alias npm-update='npm install -g npm; npm update -g'
+alias npm-update='npm update -g'
 # Update Homebrew packages
 alias brew-update='brew update; brew upgrade --all; brew cleanup'
