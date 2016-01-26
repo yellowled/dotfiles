@@ -1,6 +1,4 @@
-# Settings
 # logfile "$HOME/mailfilter.log"
-MAXSPAMSCORE = "5"
 MAILDIR="$HOME/Maildir"
 
 # Check if we're called from a .qmail-EXT instead of .qmail
@@ -38,9 +36,6 @@ if( $RETURNCODE == 1 )
   `maildirmake "$MAILDIR/.0 Spamfilter.als Ham lernen"`
 }
 
-# Show the mail to SpamAssassin
-xfilter "/usr/bin/spamc"
-
 # Show the mail to DSPAM
 xfilter "/package/host/localhost/dspam/bin/dspam --mode=teft --deliver=innocent,spam --stdout"
 
@@ -51,7 +46,7 @@ if ( /^X-DSPAM-Result: Whitelisted/)
 }
 
 # Process SPAM
-if ( /^X-Spam-Level: \*{$MAXSPAMSCORE,}$/ || /^X-DSPAM-Result: Spam/)
+if ( /^X-DSPAM-Result: Spam/)
 {
   MAILDIR="$MAILDIR/.0 Spamfilter.als Spam erkannt"
   # Mark as read
