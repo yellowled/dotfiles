@@ -25,3 +25,6 @@ shopt -s checkwinsize
 
 # Not a vi(m) person, let's use nano
 export EDITOR="nano"
+
+# Opt out of Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1

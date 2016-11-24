@@ -21,4 +21,4 @@ alias ruby-update='gem update --system; gem update; gem cleanup'
 alias npm-update='npm update -g'
 alias npm-global='npm list -g --depth=0'
 # Update Homebrew packages
-alias brew-update='brew update; brew upgrade --all; brew cleanup'
+alias brew-update='brew update; brew upgrade; brew cleanup'
