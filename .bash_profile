@@ -1,3 +1,4 @@
+source ~/.profile
 export CLICOLOR=1
 
 # If present, get .bashrc
@@ -35,6 +36,11 @@ fi
 
 # Use grunt-completion
 eval "$(grunt --completion=bash)"
+
+# Use npm-completion
+if [ -f ~/.npm-completion.bash ]; then
+    . ~/.npm-completion.bash
+fi
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

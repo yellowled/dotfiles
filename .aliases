@@ -17,8 +17,9 @@ alias sudo='sudo '
 
 # Update Ruby gems
 alias ruby-update='gem update --system; gem update; gem cleanup'
-# Update npm + node packages
-alias npm-update='npm update -g'
-alias npm-global='npm list -g --depth=0'
 # Update Homebrew packages
 alias brew-update='brew update; brew upgrade; brew cleanup'
+# List global node packages
+alias npm-global='npm list -g --depth=0'
+# List global node packages that need updates
+alias npm-outdated='npm outdated -g --depth=0'
