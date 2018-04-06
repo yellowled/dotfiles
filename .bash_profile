@@ -41,6 +41,3 @@ eval "$(grunt --completion=bash)"
 if [ -f ~/.npm-completion.bash ]; then
     . ~/.npm-completion.bash
 fi
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
