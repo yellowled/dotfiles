@@ -13,7 +13,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 PHP_VERSION='php7.0.27'
 
 # Aliases for use with MAMP
-alias mysql='/Applications/MAMP/Library/bin/mysql'
+# alias mysql='/Applications/MAMP/Library/bin/mysql'
 alias composer='php /Applications/MAMP/bin/php/${PHP_VERSION}/bin/composer.phar'
 
-export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:/Applications/MAMP/Library/bin:$PATH
