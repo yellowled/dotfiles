@@ -1,4 +1,3 @@
-source ~/.profile
 export CLICOLOR=1
 
 # If present, get .bashrc
@@ -14,30 +13,24 @@ unset file
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
-
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# Use bash-completion
+# Use completions
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-# Use git-completion
-# curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
-# Use grunt-completion
-eval "$(grunt --completion=bash)"
-
-# Use npm-completion
 if [ -f ~/.npm-completion.bash ]; then
     . ~/.npm-completion.bash
 fi
 
-# Use brew-completion
 if [ -f $(brew --prefix)/etc/bash_completion.d/brew_bash_completion.sh ]; then
     . $(brew --prefix)/etc/bash_completion.d/brew_bash_completion.sh
 fi
+
+eval "$(grunt --completion=bash)"
