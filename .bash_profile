@@ -36,3 +36,8 @@ eval "$(grunt --completion=bash)"
 if [ -f ~/.npm-completion.bash ]; then
     . ~/.npm-completion.bash
 fi
+
+# Use brew-completion
+if [ -f $(brew --prefix)/etc/bash_completion.d/brew_bash_completion.sh ]; then
+    . $(brew --prefix)/etc/bash_completion.d/brew_bash_completion.sh
+fi
