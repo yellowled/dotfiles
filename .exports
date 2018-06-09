@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Larger bash history
 export HISTSIZE=8192
 export HISTFILESIZE=$HISTSIZE
