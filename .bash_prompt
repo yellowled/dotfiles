@@ -64,13 +64,13 @@ if tput setaf 1 &> /dev/null; then
 	black=$(tput setaf 0);
 	blue=$(tput setaf 39);
 	cyan=$(tput setaf 37);
-	green=$(tput setaf 150);
+	green=$(tput setaf 78);
 	orange=$(tput setaf 202);
 	purple=$(tput setaf 125);
-	red=$(tput setaf 124);
-	violet=$(tput setaf 176);
+	red=$(tput setaf 160);
+	violet=$(tput setaf 141);
 	white=$(tput setaf 15);
-	yellow=$(tput setaf 221);
+	yellow=$(tput setaf 220);
 else
 	bold='';
 	reset="\e[0m";
