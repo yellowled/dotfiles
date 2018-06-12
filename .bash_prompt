@@ -63,7 +63,7 @@ if tput setaf 1 &> /dev/null; then
 	# Solarized colors, taken from http://git.io/solarized-colors.
 	black=$(tput setaf 0);
 	blue=$(tput setaf 39);
-	cyan=$(tput setaf 37);
+	cyan=$(tput setaf 45);
 	green=$(tput setaf 78);
 	orange=$(tput setaf 202);
 	purple=$(tput setaf 125);
@@ -95,7 +95,7 @@ fi;
 
 # Highlight the hostname when connected via SSH.
 if [[ "${SSH_TTY}" ]]; then
-	hostStyle="${red}";
+	hostStyle="${cyan}";
 else
 	hostStyle="${yellow}";
 fi;
