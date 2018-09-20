@@ -1,3 +1,6 @@
+# Set terminal language
+export LANG=en_US.UTF-8
+
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
