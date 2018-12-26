@@ -19,6 +19,4 @@ shopt -s cdspell
 # Use completions
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
-if [ -f ~/.npm-completion.bash ]; then
-    . ~/.npm-completion.bash
-fi
+[ -f ~/.npm-completion.bash ] && . ~/.npm-completion.bash
