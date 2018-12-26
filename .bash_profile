@@ -17,20 +17,8 @@ shopt -s histappend
 shopt -s cdspell
 
 # Use completions
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-
-if [ -f ~/.git-completion.bash ]; then
-    . ~/.git-completion.bash
-fi
+[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
 if [ -f ~/.npm-completion.bash ]; then
     . ~/.npm-completion.bash
 fi
-
-if [ -f $(brew --prefix)/etc/bash_completion.d/brew_bash_completion.sh ]; then
-    . $(brew --prefix)/etc/bash_completion.d/brew_bash_completion.sh
-fi
-
-eval "$(grunt --completion=bash)"
