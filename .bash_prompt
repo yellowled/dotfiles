@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 	export TERM='gnome-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -56,41 +55,23 @@ prompt_git() {
 	fi;
 }
 
-if tput setaf 1 &> /dev/null; then
-	tput sgr0; # reset colors
-	bold=$(tput bold);
-	reset=$(tput sgr0);
-	# Solarized colors, taken from http://git.io/solarized-colors.
-	black=$(tput setaf 0);
-	blue=$(tput setaf 39);
-	cyan=$(tput setaf 45);
-	green=$(tput setaf 78);
-	orange=$(tput setaf 202);
-	purple=$(tput setaf 125);
-	red=$(tput setaf 160);
-	violet=$(tput setaf 141);
-	white=$(tput setaf 15);
-	yellow=$(tput setaf 220);
-else
-	bold='';
-	reset="\e[0m";
-	black="\e[1;30m";
-	blue="\e[1;34m";
-	cyan="\e[1;36m";
-	green="\e[1;32m";
-	orange="\e[1;33m";
-	purple="\e[1;35m";
-	red="\e[1;31m";
-	violet="\e[1;35m";
-	white="\e[1;37m";
-	yellow="\e[1;33m";
-fi;
+# Use the normal iterm theme colors
+bold='';
+reset="\e[0m";
+black="\e[1;30m";
+red="\e[1;31m";
+green="\e[1;32m";
+yellow="\e[1;33m";
+blue="\e[1;34m";
+purple="\e[1;35m";
+cyan="\e[1;36m";
+white="\e[1;37m";
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
-	userStyle="${red}";
+	userStyle="${cyan}";
 else
-	userStyle="${orange}";
+	userStyle="${red}";
 fi;
 
 # Highlight the hostname when connected via SSH.
