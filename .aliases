@@ -27,7 +27,7 @@ alias reload="exec ${SHELL} -l"
 # Update Ruby gems
 alias ruby-update='gem update --system; gem update; gem cleanup'
 # Update Homebrew packages
-alias brew-update='brew update; brew upgrade; brew cleanup'
+alias brew-update='brew update; brew upgrade'
 # List global node packages
 alias npm-global='npm list -g --depth=0'
 # List global node packages that need updates
