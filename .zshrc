@@ -92,3 +92,4 @@ export EDITOR='nano'
 # For a full list of active aliases, run `alias`.
 alias npm-global="npm list -g --depth=0"
 alias npm-outdated="npm outdated -g --depth=0"
+alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
