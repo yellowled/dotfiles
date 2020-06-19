@@ -1,6 +1,6 @@
 [user]
-    name = Matthias Mees
-    email = mm@yellowled.de
+	name = Matthias Mees
+	email = mm@yellowled.de
 [color]
     ui = true
 [push]
@@ -9,3 +9,13 @@
     helper = osxkeychain
 [pager]
 	branch = false
+[core]
+	excludesfile = /Users/matthias/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pull]
+	rebase = false
