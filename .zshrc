@@ -23,8 +23,3 @@ export LANG=en_US.UTF-8
 
 # Editor
 export EDITOR='nano'
-
-# Aliases
-alias npm-global="npm list -g --depth=0"
-alias npm-outdated="npm outdated -g --depth=0"
-alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
