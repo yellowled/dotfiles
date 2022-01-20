@@ -1,6 +1,13 @@
 # PATH.
 export PATH=$PATH:/opt/homebrew/bin
 
+# Lang environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Editor
+export EDITOR='nano'
+
 # Path to oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
 
@@ -16,10 +23,3 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# Lang environment
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-# Editor
-export EDITOR='nano'
