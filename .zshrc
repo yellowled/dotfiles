@@ -1,4 +1,4 @@
-# PATH.
+# PATH
 export PATH=$PATH:/opt/homebrew/bin
 
 # Lang environment
@@ -14,12 +14,16 @@ export ZSH=$HOME/.oh-my-zsh
 # Theme
 ZSH_THEME="suvash"
 
+# nvm plugin settings
+export NVM_AUTO_USE=true
+export NVM_COMPLETION=true
+
 # Plugins
 plugins=(
     brew
     gitfast
     npm
-    nvm
+    zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
