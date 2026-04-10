@@ -18,3 +18,23 @@
     default = simple
 [rebase]
     autosquash = true
+[alias]
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+[alias]
+    list = "!while true; do \
+        sel=$(git log -n 50 --color=always --pretty=format:'%C(yellow)%h%Creset %s %Cblue(%cr)%Creset' --no-merges | \
+            fzf --ansi --prompt='Pick commit (q to quit)> ' --bind 'q:abort'); \
+        [ -z \"$sel\" ] && break; \
+        sha=$(echo \"$sel\" | awk '{print $1}'); \
+        git show --color=always \"$sha\" | less -R; \
+    done"
+[alias]
+    bswitch = "!current=$(git branch --show-current); \
+        branch=$(git branch --format='%(refname:short)' | \
+        grep -v \"^${current}$\" | \
+        fzf --prompt='Switch to branch> ' \
+            --bind 'q:abort' \
+            --color 'pointer:yellow,fg+:yellow' \
+            --header $'Switching from: '"${current}"); \
+        [ -z \"$branch\" ] && exit 0; \
+        git checkout \"$branch\""
